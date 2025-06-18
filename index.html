@@ -1,36 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- Meta setup -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Todo app</title>
+  <!-- Page title -->
+  <title>Todo App</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional: Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
 
-  Todo
+    <!-- TODO Header -->
+    <h1 class="display-5 mb-4 text-white text-center">
+      TODO 
+      <img src="images/icon-sun.svg" alt="Toggle Theme" class="ms-2" style="width: 24px; height: 24px; cursor: pointer;" />
+    </h1>
 
-  <!-- Add dynamic number --> items left
+    <!-- Input to add new todo -->
+    <input 
+      type="text" 
+      class="form-control mb-4 text-white" 
+      placeholder="Create a new todo..."
+    >
 
-  All
-  Active 
-  Completed
+    <!-- Todo List Box -->
+    <div class="card todo-card w-100 p-3 mb-3">
+      <ul class="list-group list-group-flush">
 
-  Clear Completed
+        <!-- Completed Item -->
+        <li class="list-group-item bg-transparent text-white d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox" checked>
+          <span class="todo-item completed">Complete online JavaScript course</span>
+        </li>
 
-  Drag and drop to reorder list
+        <!-- Active Items -->
+        <li class="list-group-item bg-transparent text-white d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox">
+          Jog around the park 3x
+        </li>
+        <li class="list-group-item bg-transparent text-white d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox">
+          10 minutes meditation
+        </li>
+        <li class="list-group-item bg-transparent text-white d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox">
+          Read for 1 hour
+        </li>
+        <li class="list-group-item bg-transparent text-white d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox">
+          Pick up groceries
+        </li>
+        <li class="list-group-item bg-transparent text-white d-flex align-items-center">
+          <input class="form-check-input me-2" type="checkbox">
+          Complete Todo App on Frontend Mentor
+        </li>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      </ul>
+
+      <!-- Footer Controls -->
+      <div class="todo-footer d-flex justify-content-between align-items-center px-2 pt-2">
+
+        <!-- Item Count -->
+        <span class="text-muted small">5 items left</span>
+
+        <!-- Filter Tabs -->
+        <nav>
+          <div class="nav nav-pills">
+            <a class="nav-link active" href="#">All</a>
+            <a class="nav-link" href="#">Active</a>
+            <a class="nav-link" href="#">Completed</a>
+          </div>
+        </nav>
+
+        <!-- Clear Completed -->
+        <a href="#" class="text-muted small text-decoration-none">Clear Completed</a>
+
+      </div>
+    </div> <!-- closes .card -->
+
+  </div> <!-- closes .container -->
+
+  <!-- Optional Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
