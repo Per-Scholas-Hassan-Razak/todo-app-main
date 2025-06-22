@@ -8,6 +8,9 @@ This is a JavaScript-based Task Management App that allows users to:
 - Filter tasks by status (All, In Progress, Completed, Overdue)
 - Store and load tasks using localStorage so data persists on refresh
 
+## 🚀 Live Demo
+
+[Click here to view the live app](https://per-scholas-hassan-razak.github.io/todo-app-main/)
 
 ## Features
 
